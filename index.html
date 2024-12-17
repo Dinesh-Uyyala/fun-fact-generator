@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-box {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Fact Generator</h1>
+        <div id="fact" class="fact-box">Click the button to see a fun fact!</div>
+        <button onclick="generateFact()">Generate Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Bananas are berries, but strawberries aren't.",
+            "A single teaspoon of honey represents the life work of 12 bees.",
+            "Octopuses have three hearts and blue blood.",
+            "A day on Venus is longer than a year on Venus.",
+            "There are more trees on Earth than stars in the Milky Way galaxy.",
+            "A group of flamingos is called a 'flamboyance'.",
+            "The Amazon rainforest produces more than 20% of the world's oxygen supply.",
+            "Cows have best friends and can become stressed when separated from them.",
+            "A snail can sleep for three years.",
+            "The heart of a shrimp is located in its head.",
+            "Some bamboo species can grow almost a meter in just one day.",
+            "The fingerprints of a koala are so indistinguishable from humans that they have been confused at crime scenes.",
+            "The world's oldest known living tree is over 5,000 years old.",
+            "A rhinoceros's horn is made of compacted hair.",
+            "The shortest war in history lasted 38 to 45 minutes.",
+            "The blue whale's heart is the size of a small car.",
+            "A chameleon's tongue can be as long as its body.",
+            "The oceans contain almost 200,000 different viruses.",
+            "A single strand of spider silk is thinner than a human hair, but also five times stronger than steel of the same diameter.",
+            "Polar bears have black skin under their white fur."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
